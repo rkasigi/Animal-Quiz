@@ -18,40 +18,13 @@ public class AnimalQuizRepository {
     }
 
     public AnimalQuizRepository() {
-        animalQuizModelList.add(
-                new AnimalQuizModel(AnimalRepository.getInstance().findByAnimalId(AnimalModel.AnimalId.CAT),
-                        1,
-                        "Cat", "Cow", "Pig", "Elephant"
-                )
-        );
 
-        animalQuizModelList.add(
-                new AnimalQuizModel(AnimalRepository.getInstance().findByAnimalId(AnimalModel.AnimalId.COCK),
-                        3,
-                        "Cow", "Duck", "Roaster", "Dog"
-                )
-        );
+        for(AnimalModel.AnimalId id: AnimalModel.AnimalId.values()) {
+            animalQuizModelList.add(
+                    new AnimalQuizModel(AnimalRepository.getInstance().findByAnimalId(id))
+            );
 
-        animalQuizModelList.add(
-                new AnimalQuizModel(AnimalRepository.getInstance().findByAnimalId(AnimalModel.AnimalId.COW),
-                        1,
-                        "Cow", "Cat", "Dog", "Lion"
-                )
-        );
-
-        animalQuizModelList.add(
-                new AnimalQuizModel(AnimalRepository.getInstance().findByAnimalId(AnimalModel.AnimalId.DOG),
-                        3,
-                        "Pig", "Cat", "Dog", "Cow"
-                )
-        );
-
-        animalQuizModelList.add(
-                new AnimalQuizModel(AnimalRepository.getInstance().findByAnimalId(AnimalModel.AnimalId.DUCK),
-                        4,
-                        "Pig", "Dog", "Cow", "Duck"
-                )
-        );
+        }
     }
 
 

@@ -24,6 +24,10 @@ public class AnimalRepository {
         animalList.add(new AnimalModel(AnimalModel.AnimalId.COW, "Sapi", "Cow", R.drawable.cow, R.raw.cow));
         animalList.add(new AnimalModel(AnimalModel.AnimalId.DOG, "Anjing", "Dog", R.drawable.dog, R.raw.dog));
         animalList.add(new AnimalModel(AnimalModel.AnimalId.DUCK, "Bebek", "Duck", R.drawable.duck, R.raw.duck));
+        animalList.add(new AnimalModel(AnimalModel.AnimalId.ELEPHANT, "Gajah", "Elephant", R.drawable.elephant, R.raw.elephant));
+        animalList.add(new AnimalModel(AnimalModel.AnimalId.HORSE, "Kuda", "Horse", R.drawable.horse, R.raw.horse));
+        animalList.add(new AnimalModel(AnimalModel.AnimalId.LION, "Singa", "Lion", R.drawable.lion, R.raw.lion));
+        animalList.add(new AnimalModel(AnimalModel.AnimalId.PIG, "Babi", "Pig", R.drawable.pig, R.raw.pig));
 
     }
 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="iak.rkasigi.net.quizbinatang.AnimalLessonActivity">
+
+
+    <ImageView
+        android:id="@+id/lsnImageViewAnimal"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/lsnTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lsnImageViewAnimal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+
+        android:text="Title" />
+
+    <TextView
+        android:id="@+id/lsnInEnglishCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lsnTitle"
+        android:gravity="left"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:text="Dalam Bahasa Inggris:" />
+
+    <TextView
+        android:id="@+id/lsnTitlen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lsnInEnglishCaption"
+        android:gravity="left"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="..." />
+
+    <Button
+        android:id="@+id/lsnButtonHearVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lsnTitlen"
+        android:text="Dengarkan suaranya" />
+
+    <Button
+        android:id="@+id/lsnButtonNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Selanjutnya" />
+</RelativeLayout>

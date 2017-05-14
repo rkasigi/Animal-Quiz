@@ -2,6 +2,7 @@ package iak.rkasigi.net.quizbinatang;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 /**
  * Created by rkasigi on 5/14/17.
@@ -28,5 +29,17 @@ public class AnimalRepository {
 
     public List<AnimalModel> getAnimalList() {
         return animalList;
+    }
+
+    public AnimalModel findByAnimalId(AnimalModel.AnimalId animalId) {
+        ListIterator<AnimalModel> iterator = animalList.listIterator();
+
+        for(AnimalModel animal: animalList) {
+            if(animal.getAnimalId().equals(animalId)) {
+                return animal;
+            }
+        }
+
+        return null;
     }
 }

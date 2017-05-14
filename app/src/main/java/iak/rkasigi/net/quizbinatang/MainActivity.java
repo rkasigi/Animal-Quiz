@@ -16,14 +16,24 @@ public class MainActivity extends AppCompatActivity {
         String loginName = getIntent().getStringExtra("loginName");
         ((TextView)findViewById(R.id.textViewDisplayName)).setText("Selamat datang " + loginName);
 
-        final Intent intent = new Intent(this, AnimalLessonActivity.class);
         TextView buttonShowBelajarBinatang = (TextView) findViewById(R.id.buttonShowBelajarBinatang);
+        TextView buttonQuizBinatang = (TextView) findViewById(R.id.buttonShowQuizBinatang);
 
 
         buttonShowBelajarBinatang.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), AnimalLessonActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonQuizBinatang.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), QuizActivity.class);
                 startActivity(intent);
             }
         });

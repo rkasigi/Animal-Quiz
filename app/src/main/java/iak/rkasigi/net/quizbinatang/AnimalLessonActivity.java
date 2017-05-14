@@ -1,9 +1,6 @@
 package iak.rkasigi.net.quizbinatang;
 
-import android.app.AlertDialog;
-import android.content.Intent;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,8 +26,6 @@ public class AnimalLessonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animal_lesson);
-
-        //MediaPlayer mPlayer = MediaPlayer.create(this, null);
 
 
         imageViewAnimal = (ImageView) findViewById(R.id.lsnImageViewAnimal);

@@ -72,10 +72,10 @@ public class QuizActivity extends AppCompatActivity {
         animalQuizModel = quiz;
         imageViewAnimal.setImageResource(quiz.getAnimalModel().getImage());
         textViewTitleAnimalId.setText(quiz.getAnimalModel().getNameID());
-        radioButton01.setText(quiz.getQuestion01());
-        radioButton02.setText(quiz.getQuestion02());
-        radioButton03.setText(quiz.getQuestion03());
-        radioButton04.setText(quiz.getQuestion04());
+        radioButton01.setText(quiz.getChoicesAnswer().get(0));
+        radioButton02.setText(quiz.getChoicesAnswer().get(1));
+        radioButton03.setText(quiz.getChoicesAnswer().get(2));
+        radioButton04.setText(quiz.getChoicesAnswer().get(3));
 
         mPlayer = MediaPlayer.create(this, quiz.getAnimalModel().getVoice());
         mPlayer.start();
@@ -126,28 +126,11 @@ public class QuizActivity extends AppCompatActivity {
                     Toast.makeText(v.getContext(), "Selamat Jawaban kamu benar", Toast.LENGTH_SHORT).show();
                     nextQuestion();
                 } else {
-                    String correntAnswer = "";
-                    switch (animalQuizModel.getAnswer()) {
-                        case 1:
-                            correntAnswer = animalQuizModel.getQuestion01();
-                            break;
-
-                        case 2:
-                            correntAnswer = animalQuizModel.getQuestion02();
-                            break;
-
-                        case 3:
-                            correntAnswer = animalQuizModel.getQuestion03();
-                            break;
-
-                        case 4:
-                            correntAnswer = animalQuizModel.getQuestion04();
-                            break;
-                    }
+                    String correntAnswer = animalQuizModel.getAnswerString();
 
                     new AlertDialog.Builder(v.getContext())
-                            .setTitle("Informasi")
-                            .setMessage("Maaf, jawaban kamu salah, jawaban yang benar adalah " + correntAnswer)
+                            .setTitle("Jawaban")
+                            .setMessage(String.format("Maaf, jawaban kamu salah.\nJawaban yang benar adalah %s", correntAnswer))
                             .setIcon(android.R.drawable.ic_dialog_alert)
                             .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener(){
                                 @Override

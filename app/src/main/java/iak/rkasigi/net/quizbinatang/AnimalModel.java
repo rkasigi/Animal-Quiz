@@ -4,24 +4,19 @@ package iak.rkasigi.net.quizbinatang;
 
 public class AnimalModel {
 
-    private AnimalId animalId;
     private String nameID;
     private String nameEN;
     private int image;
     private int voice;
 
 
-    public AnimalModel(AnimalId animalId, String nameID, String nameEN, int image, int voice) {
-        this.animalId = animalId;
+    public AnimalModel(String nameID, String nameEN, int image, int voice) {
         this.nameID = nameID;
         this.nameEN = nameEN;
         this.image = image;
         this.voice = voice;
     }
 
-    public AnimalId getAnimalId() {
-        return animalId;
-    }
 
     public String getNameID() {
         return nameID;
